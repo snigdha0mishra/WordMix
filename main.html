@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Mix</title>
+    <link rel="icon" href ="./assets/WordMix_Icon.png" type="image.png">
+    <link rel="stylesheet" href ="styles.css">
+</head>
+<body>
+    <div class="row">
+        <div class="left-column">
+            <!--This container displays the puzzle piece graphics, on every page-->
+            <img id="top-left-puzzle" src="./assets/puzzle2.png" alt="White and Purple Puzzle Pieces Floating" class="puzzles">
+            <img id="bottom-left-puzzle" src="./assets/puzzle1.png" alt="White and Purple Puzzle Pieces" class="puzzle">
+        </div>
+
+        <div class="middle-column">
+        <!-- Welcome Display -->
+            <div id="welcome-scene">
+                <img id="welcome-logo" src="./assets/welcome_logo.png" alt="Word Mix">
+                <button id="start-button" type="button"></button>
+            </div>
+        </div>
+            <!-- Game Display -->
+            <div id="game-scene" style="display: none;">
+                <div id="game-container">
+                    <img id="title" src="./assets/WordMix_Logo.png" alt="Word Mix">
+                    <div id="score" class="overlay-text"></div>
+
+                    <!-- wordle grid of 30 squares -->
+                    <div id="grid-container"></div>
+                    
+
+                </div> 
+            </div>
+
+            <!-- Game Over Display -->
+            <div id="game-over-scene" style="display: none;">
+                <div class="canvas-wrapper">
+                    <!-- Add game over content here -->
+                </div>
+            </div>
+        
+
+        <div class="right-column">
+            <!--This container displays the puzzle piece graphics flipped vertically, on every page-->
+            <img id="top-right-puzzle" src="./assets/puzzle1.png" alt="White and Purple Puzzle Pieces" class="puzzle">
+            <img id="bottom-right-puzzle" src="./assets/puzzle2.png" alt="White and Purple Puzzle Pieces Floating" class="puzzles">
+        </div>
+
+        <!-- Link to the Main Game -->
+        <script src="wordMix.js" defer></script>
+    </div>
+        
+    
+</body>
+</html>
+<!--
+
+
+<div class = "container">
+        <div class = "side-column left">
+            <img id="top-left-puzzle" src="./assets/puzzle2.png" alt="White and Purple Puzzle Pieces Floating" class="puzzles">
+            <img id="bottom-left-puzzle" src="./assets/puzzle1.png" alt="White and Purple Puzzle Pieces" class="puzzle">
+        </div>
+        <div class = "middle-column">
+            <img id="welcome-logo" src="./assets/welcome_logo.png" alt="Word Mix">
+            <button id="start-button" type="button"></button>
+        </div>
+        <div class = "side-column right">
+            <img id="top-right-puzzle" src="./assets/puzzle1.png" alt="White and Purple Puzzle Pieces" class="puzzle">
+            <img id="bottom-right-puzzle" src="./assets/puzzle2.png" alt="White and Purple Puzzle Pieces Floating" class="puzzles">
+        </div>
+    </div>
+-->
