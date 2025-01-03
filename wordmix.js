@@ -4,7 +4,6 @@ const gameOverScene = document.getElementById('game-over-scene');
 const startButton = document.getElementById('start-button');
 const gameContainer = document.getElementById('game-container');
 const gameScore = document.getElementById('game-score');
-const puzzles = document.getElementsByClassName('left-column', 'right-column');
 
 let selectedWord = '';
 
@@ -14,12 +13,34 @@ startButton.onclick = function () {
         gameScene.style.display = 'flex';
         gameContainer.style.display = 'flex';
         
-        fetchRandomWord();
+        
     } else {
         console.error('Missing elements!');
     }
     
     gameLoop();
+}
+
+
+
+function gameLoop(){
+    gridContainer();
+    
+    fetchRandomWord();
+    
+}
+
+function gridContainer(){
+    const gridContainer = document.getElementById('grid-container');
+    const rows = 6;
+    const columns = 5;
+    
+    
+    for (let i = 0; i < rows * columns; i++) {
+        const gridSquare = document.createElement('div');
+        gridSquare.classList.add('grid-square');
+        gridContainer.appendChild(gridSquare);
+    }
 }
 
 function fetchRandomWord(){
@@ -34,16 +55,3 @@ function fetchRandomWord(){
         .catch(error => console.error('Error fetching random word:', error));
 }
 
-
-function gameLoop(){
-    const gridContainer = document.getElementById('grid-container');
-    const rows = 6;
-    const columns = 5;
-    
-    
-    for (let i = 0; i < rows * columns; i++) {
-        const gridSquare = document.createElement('div');
-        gridSquare.classList.add('grid-square');
-        gridContainer.appendChild(gridSquare);
-    }
-}

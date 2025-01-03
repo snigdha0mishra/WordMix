@@ -21,18 +21,56 @@
                 <img id="welcome-logo" src="./assets/welcome_logo.png" alt="Word Mix">
                 <button id="start-button" type="button"></button>
             </div>
-        </div>
-            <!-- Game Display -->
-            <div id="game-scene" style="display: none;">
+             <!-- Game Display -->
+             <div id="game-scene" style="display: none;">
                 <div id="game-container">
                     <img id="title" src="./assets/WordMix_Logo.png" alt="Word Mix">
                     <div id="score" class="overlay-text"></div>
 
                     <!-- wordle grid of 30 squares -->
                     <div id="grid-container"></div>
-                    
 
+                    <!-- Keyboard Buttons -->
+                    <div id="keyboard-container">
+                        <div class="keyboard-row">
+                            <button data-key="Q">Q</button>
+                            <button data-key="W">W</button>
+                            <button data-key="E">E</button>
+                            <button data-key="R">R</button>
+                            <button data-key="T">T</button>
+                            <button data-key="Y">Y</button>
+                            <button data-key="U">U</button>
+                            <button data-key="I">I</button>
+                            <button data-key="O">O</button>
+                            <button data-key="P">P</button>
+                        </div>
+                        <div class="keyboard-row">
+                            <div class="spacers"></div>
+                            <button data-key="A">A</button>
+                            <button data-key="S">S</button>
+                            <button data-key="D">D</button>
+                            <button data-key="F">F</button>
+                            <button data-key="G">G</button>
+                            <button data-key="H">H</button>
+                            <button data-key="J">J</button>
+                            <button data-key="K">K</button>
+                            <button data-key="L">L</button>
+                            <div class="spacers"></div>
+                        </div>
+                        <div class="keyboard-row">
+                            <button data-key="delete" class="keyboard-key">delete</button>
+                            <button data-key="Z">Z</button>
+                            <button data-key="X">X</button>
+                            <button data-key="C">C</button>
+                            <button data-key="V">V</button>
+                            <button data-key="B">B</button>
+                            <button data-key="N">N</button>
+                            <button data-key="M">M</button>
+                            <button data-key="enter" class="keyboard-key">enter</button>
+                        </div>
+                    </div>
                 </div> 
+                
             </div>
 
             <!-- Game Over Display -->
@@ -41,6 +79,11 @@
                     <!-- Add game over content here -->
                 </div>
             </div>
+
+
+
+        </div>
+           
         
 
         <div class="right-column">
