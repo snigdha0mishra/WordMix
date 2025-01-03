@@ -11,49 +11,45 @@ body, html{
 .row {
     display: flex; /* Display Flex allows the child elements to display in a row*/
     width: 100%;
-    height: 100%;
-    
+    height: 100vh;
+    justify-content: space-between;
+    position: relative;
 }
 
 .left-column, .right-column {
     /*float: left; Float is not necessary when dealing with Flex. Redundant */
     width:25%; /*declaring the width in conjunction with Flex, 
     allows for child elements (columns) to be displayed in a row, with the appropirate sizing*/
-    background-color: antiquewhite;
     display: flex;
     position: relative;
     
 }
 
 .puzzle, .puzzles {
-    opacity: 0.70;
-    scale: 50%;   
+    opacity: 0.65;
+    position: fixed;  
+    width: 25%;
+    
 }
 #top-left-puzzle {
-    top:0px;
-    left:0px;
-    position: absolute;
-    background-color: aqua;
+    top:0;
+    left:0;
+
 }
 #bottom-left-puzzle {
     bottom:0;
     left:0;
-    position: absolute;
-    background-color: red;
+
 }
 #top-right-puzzle {
     top:0;
     right:0;
-    position: absolute;
-    background-color: red;
     transform:rotate(180deg);
 }
 #bottom-right-puzzle {
     bottom:0;
     right:0;
-    position: absolute;
     transform: scaleX(-1);
-    background-color: aqua;
 }
 
 .middle-column {
@@ -70,24 +66,25 @@ body, html{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%; 
+    width: 100%;
+    height: 100vh;
 }
 
 #welcome-logo {
-    transform:  scale(0.8);
+    width:100%;
+    display: flex;
     
+        
 }
 .middle-column button {
-    display: inline-block;
-    justify-content: center;
-    height: 50px;
-    width: 205px;
+    height: 3rem;
+    width: 45%;
     background-image: url('./assets/button.png');
     background-size: cover;
     background-position:  center;
     border-color: white;
     border-radius: 25px;
-    border-width: 1px;
+    border-width: 1fr;
     cursor: pointer;
 }
 /* Flexbox for game layout */
@@ -101,7 +98,6 @@ body, html{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 100vw;
 
 }
@@ -109,24 +105,23 @@ body, html{
     background-image: url('./assets/WordMix_Logo.png');
     background-size: cover;
     background-position: center;
-    width: 300px;
-    top: 1rem;
+    width: 300px;;
     z-index: 1;
-    position: absolute;
-
+    position: relative;
+    top: 2rem;  
 }
 /* Grid for game board */
 #grid-container {
     display: grid;
     position: absolute; 
-    top: 3rem;
+    top: 4rem;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(6, 1fr);
     border: 10px solid whitesmoke;
     border-radius: 15px;
-    width: 20vw;
-    height: 50vh;
-    padding: 10px; 
+    width: 25vw;
+    height: 55vh;
+    padding: 1rem; 
     gap: 1rem;
 }
 

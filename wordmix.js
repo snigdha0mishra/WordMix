@@ -3,6 +3,8 @@ const gameScene = document.getElementById('game-scene');
 const gameOverScene = document.getElementById('game-over-scene');
 const startButton = document.getElementById('start-button');
 const gameContainer = document.getElementById('game-container');
+const gameScore = document.getElementById('game-score');
+const puzzles = document.getElementsByClassName('left-column', 'right-column');
 
 let selectedWord = '';
 
