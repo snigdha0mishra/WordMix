@@ -78,13 +78,13 @@ body, html{
 }
 #start-button {
     height: 3rem;
-    width: 45%;
+    width: 15rem;
     background-image: url('./assets/button.png');
     background-size: cover;
-    background-position:  center;
+    background-position: center;
     border-color: white;
-    border-radius: 25px;
-    border-width: 1fr;
+    border-radius: 35px;
+    border-width: 5fr;
     cursor: pointer;
 }
 /* Flexbox for game layout */

@@ -5,6 +5,7 @@ const startButton = document.getElementById('start-button');
 const gameContainer = document.getElementById('game-container');
 const gameScore = document.getElementById('game-score');
 
+
 let selectedWord = '';
 let guessedWords = [[]];
 let availableSpace = 1;
@@ -171,35 +172,32 @@ function fetchRandomWord(){
             validWords = json.map(wordObj => wordObj.word); // Store valid words
 
             const randomIndex = Math.floor(Math.random() * json.length);
-            selectedWord = json[randomIndex].word;
+            console.log("Selected Word: ", selectedWord.toUpperCase); // Log selected word
+            selectedWord = json[randomIndex].word.toUpperCase();
             console.log(selectedWord);
             
         })
         .catch(error => console.error('Error fetching random word:', error));
 }
 
-function colorGuessedWord(currentWord){
+function colorGuessedWord(currentWord) {
+    console.log("Current Word: ", currentWord); // Log current word
     const selectedWordArray = Array.from(selectedWord); 
     const currentWordArray = Array.from(currentWord); 
 
     const startIdx = (guessedWords.length - 1) * 5 + 1; 
 
-    // Check each letter in the guessed word
     currentWordArray.forEach((letter, index) => {
         const squareId = String(startIdx + index);
         const square = document.getElementById(squareId);
         
-        // Check if the square exists
         if (square) {
             if (letter === selectedWordArray[index]) {
-                // Letter is in the correct position
-                square.style.backgroundColor = "green";
+                square.style.backgroundColor = "green"; // Correct position
             } else if (selectedWordArray.includes(letter)) {
-                // Letter is in the word but in the wrong position
-                square.style.backgroundColor = "orange";
+                square.style.backgroundColor = "orange"; // Wrong position
             } else {
-                // Letter is not in the word at all
-                square.style.backgroundColor = "black";
+                square.style.backgroundColor = "black"; // Not in word
             }
         } else {
             console.error(`Square with id ${squareId} not found`);
